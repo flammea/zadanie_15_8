@@ -23,15 +23,20 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>GitHub Users Search Engine</h1>
-        <form onSubmit={event => this.onSubmit(event)}>
-          <label htmlFor="searchText">Search by user name</label>
-          <input
-            type="text"
-            id="searchText"
-            onChange={event => this.onChangeHandle(event)}
-            value={this.state.searchText}/>
-        </form>
+        <section className={'search_header'}>
+          <h1>GitHub Users Search Engine</h1>
+        </section>
+        <section className={'search_form'}>
+          <form onSubmit={event => this.onSubmit(event)}>
+            <label htmlFor="searchText">Search by user name</label>
+            <input
+              type="text"
+              id="searchText"
+              autocomplete="off"
+              onChange={event => this.onChangeHandle(event)}
+              value={this.state.searchText}/>
+          </form>
+        </section>
         <UsersList users={this.state.users}/>
       </div>
     );
@@ -55,7 +60,7 @@ class UsersList extends React.Component {
 class User extends React.Component {
   render() {
     return (
-      <div className={'users_container'}>
+      <div className={'github_user'}>
         <img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
         <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
       </div>

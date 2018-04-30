@@ -19,28 +19,23 @@ body {
     margin: 10vh auto 0 auto;
 }
 
-h1 {
+.search_header h1 {
     color: #FFFFFF;
     margin: 10px auto;
+    text-align: center;
+    font-size: 30px;
 }
 
-.users_container {
-     display: flex;
-     align-items: center;
-     flex-direction: column;
-     margin: 20px auto;
-}
-
-form, label {
+.search_form form, label {
     margin: 20px auto;
     display: inline-block;
     width: 400px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: #FFFFFF;
 }
 
-input {
+.search_form input {
     border: none;
     border-radius: 60px;
     height: 30px;
@@ -48,17 +43,29 @@ input {
     background-color: #FFFFFF;
 }
 
-a {
+.search_form textarea:focus, input:focus {
+    outline: none;
+}
+
+.github_user {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     margin: 20px auto;
+}
+
+.github_user a {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 20px;
     margin: 10px auto;
 }
 
-img {
+.github_user img {
     border-radius: 50%;
     margin: 10px auto;
     padding: 0;
 }
+
 
 
